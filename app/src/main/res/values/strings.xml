@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name">BlueList</string>
+    <string name="item_to_buy">What do you want to buy?</string>
+    <string name="title_activity_edit">Edit Item</string>
+    <string name="done">Done</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_delete">Delete</string>
+    <string name="title_text">GROCERY LIST</string>
+    <string name="action_logout">Logout</string>
+    <string name="username_text">Todd E. Wiley</string>    
+    
+    <!-- login form -->
+    <string name="token_title">Sign in for Access to Grocery List</string>
+    <string name="message_view_title">WELCOME!!</string>
+    <string name="action_settings">Settings</string>
+    <string name="worklight_button_text">Worklight Sign in</string>
+    <string name="title_login">Login</string>
+    <string name="button_login">Login</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>    
+</resources>
