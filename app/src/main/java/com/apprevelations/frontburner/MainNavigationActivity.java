@@ -19,8 +19,6 @@ import android.widget.FrameLayout;
 public class MainNavigationActivity extends ActionBarActivity implements
         NavigationDrawerFragment.NavigationDrawerCallbacks {
 
-
-
     private ActionBar bar;
     // Tab titles
     /* A bug was introduced in Android 4.3 that ignores changes to the Canvas state
@@ -97,7 +95,7 @@ public class MainNavigationActivity extends ActionBarActivity implements
             case R.id.navigation_drawer_home:
 
 
-                fragment = new MyAccount();
+                fragment = new HomeFragment();
                 fragment.setArguments(mBundle);
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, fragment)

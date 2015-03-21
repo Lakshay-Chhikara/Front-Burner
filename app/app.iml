@@ -99,12 +99,12 @@
     <orderEntry type="library" exported="" name="jackson-core-asl-1.9.13" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-21.0.3" level="project" />
     <orderEntry type="library" exported="" name="ibmpush-1.0.1.20150311-1224" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-21.0.3" level="project" />
     <orderEntry type="library" exported="" name="guava-jdk5-13.0" level="project" />
+    <orderEntry type="library" exported="" name="support-annotations-21.0.3" level="project" />
     <orderEntry type="library" exported="" name="ibmdata-1.0.1.20150311-1224" level="project" />
     <orderEntry type="library" exported="" name="google-oauth-client-1.20.0" level="project" />
-    <orderEntry type="library" exported="" name="google-http-client-gson-1.20.0" level="project" />
     <orderEntry type="library" exported="" name="gson-2.1" level="project" />
+    <orderEntry type="library" exported="" name="google-http-client-gson-1.20.0" level="project" />
     <orderEntry type="library" exported="" name="ibmcloudcode-1.0.1.20150311-1224" level="project" />
   </component>
 </module>
