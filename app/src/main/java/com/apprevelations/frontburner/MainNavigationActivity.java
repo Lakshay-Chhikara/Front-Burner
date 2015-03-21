@@ -9,15 +9,15 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
 
-import com.google.android.gms.maps.MapFragment;
-
-public class MainNavigationActivity extends ActionBarActivity  {
+public class MainNavigationActivity extends ActionBarActivity implements
+        NavigationDrawerFragment.NavigationDrawerCallbacks {
 
 
 
@@ -47,18 +47,25 @@ public class MainNavigationActivity extends ActionBarActivity  {
     int Flag=0;
     private Bundle mBundle = new Bundle();
     DrawerLayout mDrawerLayout;
-
+    Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().show();
-        setContentView(R.layout.activity_main);
 
+       // getSupportActionBar().show();
+        setContentView(R.layout.activity_navigation);
+
+       toolbar =(Toolbar) findViewById(R.id.toolbarfeed);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setDisplayShowHomeEnabled(false);
+        getSupportActionBar().setDisplayUseLogoEnabled(false);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mContainer = (FrameLayout) findViewById(R.id.container);
 
-        restoreActionBar();
+       // restoreActionBar();
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();

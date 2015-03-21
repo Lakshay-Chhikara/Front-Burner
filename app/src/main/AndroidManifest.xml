@@ -26,18 +26,28 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
+            android:name="com.apprevelations.frontburner.MainNavigationActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+              <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
             android:name="com.apprevelations.frontburner.MainActivity"
             android:configChanges="keyboardHidden|orientation"
             android:label="@string/app_name" >
-            <!-- Push Settings Start -->
-            <!-- Notification Intent -->
+
             <intent-filter>
                 <action android:name="com.apprevelations.frontburner.IBMPushNotification" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
-            <!-- Push Settings End -->
         </activity>
         <activity
             android:name="com.apprevelations.frontburner.EditActivity"
@@ -50,8 +60,8 @@
             android:name="com.apprevelations.frontburner.LoginActivity"
             android:label="@string/app_name" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
 
