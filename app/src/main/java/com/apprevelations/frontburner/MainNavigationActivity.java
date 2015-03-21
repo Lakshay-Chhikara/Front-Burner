@@ -95,7 +95,7 @@ public class MainNavigationActivity extends ActionBarActivity implements
             case R.id.navigation_drawer_home:
 
 
-                fragment = new HomeFragment();
+                fragment = new MainFragment();
                 fragment.setArguments(mBundle);
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, fragment)

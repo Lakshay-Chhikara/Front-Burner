@@ -16,10 +16,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.ScrollView;
-import android.widget.TextView;
 
 public class NavigationDrawerFragment extends Fragment implements OnClickListener {
 
@@ -51,10 +48,6 @@ public class NavigationDrawerFragment extends Fragment implements OnClickListene
     private int mCurrentSelectedPosition = R.id.navigation_drawer_home;
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
-
-    private RelativeLayout googlePlusProfileLayout;
-    private TextView googlePlusUserName;
-    private ImageView googlePlusProfilePic;
 
     public NavigationDrawerFragment() {
     }
