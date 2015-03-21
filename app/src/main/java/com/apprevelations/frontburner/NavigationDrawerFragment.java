@@ -90,12 +90,12 @@ public class NavigationDrawerFragment extends Fragment implements OnClickListene
         mDrawerScrollView = (ScrollView) inflater.inflate(
                 R.layout.fragment_navigation_drawer, container, false);
 
-        googlePlusProfileLayout =
+        /*googlePlusProfileLayout =
                 (RelativeLayout) mDrawerScrollView.findViewById(R.id.google_plus_profile_layout);
         googlePlusProfilePic =
                 (ImageView) mDrawerScrollView.findViewById(R.id.google_plus_profile_pic);
         googlePlusUserName = (TextView) mDrawerScrollView.findViewById(R.id.google_plus_user_name);
-
+*/
        // mDrawerScrollView.findViewById(R.id.google_plus_profile_layout).setOnClickListener(this);
         mDrawerScrollView.findViewById(R.id.navigation_drawer_home).setOnClickListener(this);
        // mDrawerScrollView.findViewById(R.id.navigation_drawer_rate_us).setOnClickListener(this);
@@ -172,9 +172,9 @@ public class NavigationDrawerFragment extends Fragment implements OnClickListene
         mDrawerLayout.setDrawerShadow(R.mipmap.shadow, GravityCompat.START);
         // set up the drawer's list view with items and click listener
 
-        ActionBar actionBar = getActionBar();
+        /*ActionBar actionBar = getActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setHomeButtonEnabled(true);
+        actionBar.setHomeButtonEnabled(true);*/
 
         // ActionBarDrawerToggle ties together the the proper interactions
         // between the navigation drawer and the action bar app icon.
