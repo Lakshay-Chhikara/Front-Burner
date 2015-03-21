@@ -8,8 +8,9 @@
     <string name="action_delete">Delete</string>
     <string name="title_text">GROCERY LIST</string>
     <string name="action_logout">Logout</string>
-    <string name="username_text">Todd E. Wiley</string>    
-    
+    <string name="username_text">Todd E. Wiley</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
     <!-- login form -->
     <string name="token_title">Sign in for Access to Grocery List</string>
     <string name="message_view_title">WELCOME!!</string>
