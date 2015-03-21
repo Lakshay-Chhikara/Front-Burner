@@ -15,14 +15,17 @@
             android:id="@+id/toolbarfeed"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="#000000"
+            android:background="#00000000"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-        <FrameLayout
+        <LinearLayout
+            android:orientation="vertical"
             android:id="@+id/container"
+            android:background="#00000000"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            />
 
     </FrameLayout>
 

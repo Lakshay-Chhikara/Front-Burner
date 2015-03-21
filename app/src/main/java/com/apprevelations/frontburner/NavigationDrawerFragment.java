@@ -165,7 +165,7 @@ public class NavigationDrawerFragment extends Fragment implements OnClickListene
         mDrawerLayout = drawerLayout;
 
         // set a custom shadow that overlays the main content when the drawer opens
-        mDrawerLayout.setDrawerShadow(R.mipmap.shadow, GravityCompat.START);
+        mDrawerLayout.setDrawerShadow(R.drawable.drawer_shadow, GravityCompat.START);
         // set up the drawer's list view with items and click listener
 
         /*ActionBar actionBar = getActionBar();
@@ -177,7 +177,7 @@ public class NavigationDrawerFragment extends Fragment implements OnClickListene
         mDrawerToggle = new ActionBarDrawerToggle(
                 getActivity(),                    /* host Activity */
                 mDrawerLayout,                    /* DrawerLayout object */
-                R.mipmap.ic_action_drawer,             /* nav drawer image to replace 'Up' caret */
+                R.drawable.ic_action_navigation_menu,             /* nav drawer image to replace 'Up' caret */
                 R.string.navigation_drawer_open,  /* "open drawer" description for accessibility */
                 R.string.navigation_drawer_close  /* "close drawer" description for accessibility */
         ) {
