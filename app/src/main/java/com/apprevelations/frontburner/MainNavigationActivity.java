@@ -57,10 +57,10 @@ public class MainNavigationActivity extends ActionBarActivity implements
 
        toolbar =(Toolbar) findViewById(R.id.toolbarfeed);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getSupportActionBar().setDisplayShowHomeEnabled(false);
-        getSupportActionBar().setDisplayUseLogoEnabled(false);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+       // getSupportActionBar().setDisplayShowHomeEnabled(false);
+        //getSupportActionBar().setDisplayUseLogoEnabled(false);
+
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mContainer = (FrameLayout) findViewById(R.id.container);

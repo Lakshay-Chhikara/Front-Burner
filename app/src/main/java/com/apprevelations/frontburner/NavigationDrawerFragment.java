@@ -181,7 +181,7 @@ public class NavigationDrawerFragment extends Fragment implements OnClickListene
         mDrawerToggle = new ActionBarDrawerToggle(
                 getActivity(),                    /* host Activity */
                 mDrawerLayout,                    /* DrawerLayout object */
-                R.mipmap.ic_action_drawer,             /* nav drawer image to replace 'Up' caret */
+                R.drawable.ic_action_navigation_menu,             /* nav drawer image to replace 'Up' caret */
                 R.string.navigation_drawer_open,  /* "open drawer" description for accessibility */
                 R.string.navigation_drawer_close  /* "close drawer" description for accessibility */
         ) {
