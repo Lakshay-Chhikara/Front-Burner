@@ -3,6 +3,7 @@ package com.apprevelations.frontburner;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -48,7 +49,7 @@ public class NavigationDrawerFragment extends Fragment implements OnClickListene
     private ScrollView mDrawerScrollView;
     private View mFragmentContainerView;
 
-    private int mCurrentSelectedPosition = R.id.navigation_drawer_home;
+    public int mCurrentSelectedPosition = R.id.navigation_drawer_home;
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
 
@@ -91,11 +92,10 @@ public class NavigationDrawerFragment extends Fragment implements OnClickListene
                 R.layout.fragment_navigation_drawer, container, false);
 
         /*googlePlusProfileLayout =
-                (RelativeLayout) mDrawerScrollView.findViewById(R.id.google_plus_profile_layout);
+                (RelativeLayout) mDrawerScrollView.findViewById(R.id.google_plus_profile_layout);*/
         googlePlusProfilePic =
                 (ImageView) mDrawerScrollView.findViewById(R.id.google_plus_profile_pic);
         googlePlusUserName = (TextView) mDrawerScrollView.findViewById(R.id.google_plus_user_name);
-*/
        // mDrawerScrollView.findViewById(R.id.google_plus_profile_layout).setOnClickListener(this);
         mDrawerScrollView.findViewById(R.id.navigation_drawer_home).setOnClickListener(this);
        // mDrawerScrollView.findViewById(R.id.navigation_drawer_rate_us).setOnClickListener(this);
@@ -142,10 +142,6 @@ public class NavigationDrawerFragment extends Fragment implements OnClickListene
                 break;
 
             case R.id.navigation_drawer_google_plus_logout:
-                selectItem(mCurrentSelectedPosition);
-                break;
-
-            case R.id.engifest:
                 selectItem(mCurrentSelectedPosition);
                 break;*/
 
@@ -314,6 +310,10 @@ public class NavigationDrawerFragment extends Fragment implements OnClickListene
          * Called when an item in the navigation drawer is selected.
          */
         void onNavigationDrawerItemSelected(int position);
+    }
+
+    public void setGooglePlusProfilePic(Bitmap googlePlusProfilePic) {
+        this.googlePlusProfilePic.setImageBitmap(googlePlusProfilePic);
     }
 
 

@@ -16,22 +16,6 @@
 package com.apprevelations.frontburner;
 
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.security.GeneralSecurityException;
-import java.util.Collections;
-import java.util.Properties;
-
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.accounts.AccountManager;
 import android.app.Activity;
 import android.content.Context;
@@ -53,6 +37,22 @@ import com.google.api.client.googleapis.auth.oauth2.GoogleIdTokenVerifier;
 import com.google.api.client.http.apache.ApacheHttpTransport;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson.JacksonFactory;
+
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.security.GeneralSecurityException;
+import java.util.Collections;
+import java.util.Properties;
 
 public class LoginActivity extends Activity implements OnClickListener{
 
@@ -478,7 +478,7 @@ public class LoginActivity extends Activity implements OnClickListener{
 			}
 						
 			final Context context = thisActivity;
-		    Intent intent = new Intent(context, MainActivity.class);
+		    Intent intent = new Intent(context, MainNavigationActivity.class);
 		    intent.putExtra("GOOGLE_ID_TOKEN",googleIdToken);
 		    intent.putExtra("GOOGLE_OAUTH_TOKEN",googleAccessToken);
 		    intent.putExtra("GOOGLE_NAME", googleFirstName+" "+googleLastName);
@@ -498,8 +498,4 @@ public class LoginActivity extends Activity implements OnClickListener{
 			mStatus.setText("Error: ID Token was not found.");
 		
 	}
-	
-
-		
- 
 }

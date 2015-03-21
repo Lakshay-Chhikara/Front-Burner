@@ -1,7 +1,13 @@
 package com.apprevelations.frontburner;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Path;
+import android.graphics.Rect;
 import android.graphics.drawable.ColorDrawable;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,11 +16,14 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
+
+import java.io.InputStream;
 
 public class MainNavigationActivity extends ActionBarActivity implements
         NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -75,7 +84,10 @@ public class MainNavigationActivity extends ActionBarActivity implements
                 R.id.navigation_drawer,
                 (mDrawerLayout));
 
-
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            new LoadProfileImage().execute(extras.getString("GOOGLE_PICTURE"));
+        }
     }
 
 
@@ -163,5 +175,62 @@ public class MainNavigationActivity extends ActionBarActivity implements
         }
     }
 
+    private class LoadProfileImage extends AsyncTask<String, Void, Bitmap> {
 
+        protected Bitmap doInBackground(String... urls) {
+            String urldisplay = urls[0];
+            Bitmap mIcon11 = null;
+            try {
+                InputStream in = new java.net.URL(urldisplay).openStream();
+                mIcon11 = BitmapFactory.decodeStream(in);
+            } catch (Exception e) {
+                Log.e("Error", e.getMessage());
+                e.printStackTrace();
+            }
+            return mIcon11;
+        }
+
+        protected void onPostExecute(Bitmap result) {
+            mNavigationDrawerFragment.setGooglePlusProfilePic(getRoundedShape(result));
+            if (mNavigationDrawerFragment.mCurrentSelectedPosition == R.id.navigation_drawer_home) {
+
+            }
+        }
+    }
+
+    private Bitmap getRoundedShape(Bitmap scaleBitmapImage) {
+        if (scaleBitmapImage != null) {
+            int targetWidth;
+            int targetHeight;
+
+            if (scaleBitmapImage.getWidth() > scaleBitmapImage.getHeight()) {
+                targetWidth = scaleBitmapImage.getHeight();
+                targetHeight = scaleBitmapImage.getHeight();
+            } else {
+                targetWidth = scaleBitmapImage.getWidth();
+                targetHeight = scaleBitmapImage.getWidth();
+            }
+
+            Bitmap targetBitmap = Bitmap.createBitmap(targetWidth,
+                    targetHeight, Bitmap.Config.ARGB_8888);
+
+            Canvas canvas = new Canvas(targetBitmap);
+            Path path = new Path();
+            path.addCircle(((float) targetWidth - 1) / 2,
+                    ((float) targetHeight - 1) / 2,
+                    (Math.min(((float) targetWidth),
+                            ((float) targetHeight)) / 2),
+                    Path.Direction.CCW);
+
+            canvas.clipPath(path);
+            Bitmap sourceBitmap = scaleBitmapImage;
+            canvas.drawBitmap(sourceBitmap,
+                    new Rect(0, 0, sourceBitmap.getWidth(),
+                            sourceBitmap.getHeight()),
+                    new Rect(0, 0, targetWidth, targetHeight), null);
+            return targetBitmap;
+        } else {
+            return null;
+        }
+    }
 }
