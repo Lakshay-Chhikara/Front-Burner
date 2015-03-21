@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +20,7 @@ public class MyAccount extends Fragment {
     private SlidingTabLayout mSlidingTabLayout;
 
     private ViewPager mViewPager;
-    CharSequence Titles[]={"Home","Events","vbvbhvjh"};
+    CharSequence Titles[]={"Question Asked","Upvoted","Comment"};
     int Numboftabs =3;
 
     @Override
@@ -34,6 +36,11 @@ public class MyAccount extends Fragment {
         // BEGIN_INCLUDE (setup_slidingtablayout)
         // Give the SlidingTabLayout the ViewPager, this must be done AFTER the ViewPager has had
         // it's PagerAdapter set.
+        Toolbar toolbar=(Toolbar)view.findViewById(R.id.toolbar);
+        ActionBarActivity activity = (ActionBarActivity) getActivity();
+        activity.setSupportActionBar(toolbar);
+        activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        activity.getSupportActionBar().setTitle("");
         mSlidingTabLayout = (SlidingTabLayout) view.findViewById(R.id.sliding_tabs);
         mSlidingTabLayout.setViewPager(mViewPager);
 

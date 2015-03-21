@@ -9,17 +9,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 
 public class MainNavigationActivity extends ActionBarActivity implements
         NavigationDrawerFragment.NavigationDrawerCallbacks {
-
-
 
     private ActionBar bar;
     // Tab titles
@@ -42,12 +39,12 @@ public class MainNavigationActivity extends ActionBarActivity implements
     private NavigationDrawerFragment mNavigationDrawerFragment;
 
     private CharSequence mTitle;
-    static FrameLayout mContainer;
+    static LinearLayout mContainer;
     private boolean flag = true;
     int Flag=0;
     private Bundle mBundle = new Bundle();
     DrawerLayout mDrawerLayout;
-    Toolbar toolbar;
+    android.support.v7.widget.Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +52,7 @@ public class MainNavigationActivity extends ActionBarActivity implements
        // getSupportActionBar().show();
         setContentView(R.layout.activity_navigation);
 
-       toolbar =(Toolbar) findViewById(R.id.toolbarfeed);
+       toolbar =(android.support.v7.widget.Toolbar) findViewById(R.id.toolbarfeed);
         setSupportActionBar(toolbar);
         //getSupportActionBar().setDisplayHomeAsUpEnabled(false);
        // getSupportActionBar().setDisplayShowHomeEnabled(false);
@@ -63,7 +60,7 @@ public class MainNavigationActivity extends ActionBarActivity implements
 
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        mContainer = (FrameLayout) findViewById(R.id.container);
+        mContainer = (LinearLayout) findViewById(R.id.container);
 
        // restoreActionBar();
         mNavigationDrawerFragment = (NavigationDrawerFragment)
