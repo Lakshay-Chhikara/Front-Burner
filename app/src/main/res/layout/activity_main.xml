@@ -53,7 +53,7 @@ limitations under the License.
 		    android:layout_height="35dp"
 		    android:layout_alignParentLeft="true"
 		    android:layout_centerVertical="true"
-		    android:background="@drawable/plusbutton"
+		    android:background="@mipmap/plusbutton"
 		    android:onClick="createItem"
 		    android:layout_marginLeft="10dp">
 		</Button>
@@ -69,7 +69,7 @@ limitations under the License.
         android:textAllCaps="true"
         android:textSize="28sp"
         android:padding="10dp"
-        android:background="@drawable/titlelines">
+        android:background="@mipmap/titlelines">
     </TextView>
     <ListView
         android:id="@+id/itemsList"
