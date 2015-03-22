@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.ibm.mobile.services.core.IBMBluemix;
+import com.ibm.mobile.services.data.IBMData;
 import com.ibm.mobile.services.push.IBMPush;
 import com.ibm.mobile.services.push.IBMPushNotificationListener;
 import com.ibm.mobile.services.push.IBMSimplePushNotification;
@@ -141,6 +142,10 @@ public final class BlueListApplication extends Application {
 		
 		// Initialize the IBM core backend-as-a-service.
 		IBMBluemix.initialize(this, props.getProperty(APP_ID), props.getProperty(APP_SECRET), props.getProperty(APP_ROUTE));
+
+        IBMData.initializeService();
+
+        Item.registerSpecialization(Item.class);
 	}
 	
 	/**
