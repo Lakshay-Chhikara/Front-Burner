@@ -78,7 +78,7 @@ public class EditActivity extends Activity {
 
 	/**
 	 * On completion of edit (edit itemList) return to main activity with edit return code.
-	 * @param View v
+	 * @param view v
 	 */
 	public void finishedEdit(View v) {
 		Item item = itemList.get(location);
