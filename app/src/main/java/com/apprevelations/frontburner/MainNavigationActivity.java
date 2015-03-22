@@ -63,8 +63,8 @@ public class MainNavigationActivity extends ActionBarActivity implements
        // getSupportActionBar().show();
         setContentView(R.layout.activity_navigation);
 
-       toolbar =(android.support.v7.widget.Toolbar) findViewById(R.id.toolbarfeed);
-        setSupportActionBar(toolbar);
+     //  toolbar =(android.support.v7.widget.Toolbar) findViewById(R.id.toolbarfeed);
+       // setSupportActionBar(toolbar);
         //getSupportActionBar().setDisplayHomeAsUpEnabled(false);
        // getSupportActionBar().setDisplayShowHomeEnabled(false);
         //getSupportActionBar().setDisplayUseLogoEnabled(false);
@@ -105,6 +105,18 @@ public class MainNavigationActivity extends ActionBarActivity implements
 
         switch (position) {
             case R.id.navigation_drawer_home:
+
+
+                fragment = new MainFragment();
+                fragment.setArguments(mBundle);
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, fragment)
+                        .commit();
+                //mBundle = null;*/
+
+                break;
+
+            case R.id.navigation_my_account:
 
 
                 fragment = new MyAccount();

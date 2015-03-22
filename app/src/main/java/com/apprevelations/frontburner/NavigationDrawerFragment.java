@@ -17,10 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.ScrollView;
-import android.widget.TextView;
 
 public class NavigationDrawerFragment extends Fragment implements OnClickListener {
 
@@ -52,10 +49,6 @@ public class NavigationDrawerFragment extends Fragment implements OnClickListene
     public int mCurrentSelectedPosition = R.id.navigation_drawer_home;
     private boolean mFromSavedInstanceState;
     private boolean mUserLearnedDrawer;
-
-    private RelativeLayout googlePlusProfileLayout;
-    private TextView googlePlusUserName;
-    private ImageView googlePlusProfilePic;
 
     public NavigationDrawerFragment() {
     }
@@ -112,6 +105,8 @@ public class NavigationDrawerFragment extends Fragment implements OnClickListene
       //  mDrawerScrollView.findViewById(R.id.engifest).setOnClickListener(this);
        // mDrawerScrollView.findViewById(R.id.navigation_drawer_home).setSelected(true);
 
+        mDrawerScrollView.findViewById(R.id.navigation_my_account).setOnClickListener(this);
+
         return mDrawerScrollView;
     }
 
@@ -133,13 +128,15 @@ public class NavigationDrawerFragment extends Fragment implements OnClickListene
                 selectItem(mCurrentSelectedPosition);
                 break;
 
+            case R.id.navigation_my_account:
+                selectItem(mCurrentSelectedPosition);
+                break;
+
             /*case R.id.navigation_drawer_feedback:
                 selectItem(mCurrentSelectedPosition);
                 break;
 
-            case R.id.navigation_drawer_rate_us:
-                selectItem(mCurrentSelectedPosition);
-                break;
+
 
             case R.id.navigation_drawer_google_plus_logout:
                 selectItem(mCurrentSelectedPosition);

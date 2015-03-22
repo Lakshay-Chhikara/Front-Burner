@@ -11,13 +11,13 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <android.support.v7.widget.Toolbar
+       <!-- <android.support.v7.widget.Toolbar
             android:id="@+id/toolbarfeed"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="#00000000"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />-->
 
         <LinearLayout
             android:orientation="vertical"
