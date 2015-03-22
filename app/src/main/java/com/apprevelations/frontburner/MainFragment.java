@@ -34,9 +34,10 @@ public class MainFragment extends Fragment {
 
         Toolbar toolbar=(Toolbar)view.findViewById(R.id.toolbar);
         ActionBarActivity activity = (ActionBarActivity) getActivity();
-        toolbar.setNavigationIcon(R.drawable.ic_action_navigation_menu);
+
         activity.setSupportActionBar(toolbar);
-      //  activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationIcon(R.drawable.ic_action_navigation_menu);
+       activity.getSupportActionBar().setDisplayHomeAsUpEnabled(false);
        // activity.getSupportActionBar().setTitle("");
 
         // END_INCLUDE (setup_viewpager)
