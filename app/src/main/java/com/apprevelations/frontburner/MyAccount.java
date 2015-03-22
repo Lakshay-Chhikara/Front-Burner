@@ -39,9 +39,9 @@ public class MyAccount extends Fragment {
         Toolbar toolbar=(Toolbar)view.findViewById(R.id.toolbar);
         ActionBarActivity activity = (ActionBarActivity) getActivity();
         activity.setSupportActionBar(toolbar);
-        activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         activity.getSupportActionBar().setTitle("");
         mSlidingTabLayout = (SlidingTabLayout) view.findViewById(R.id.sliding_tabs);
+        toolbar.setNavigationIcon(R.drawable.ic_action_navigation_menu);
         mSlidingTabLayout.setViewPager(mViewPager);
 
         mSlidingTabLayout.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {

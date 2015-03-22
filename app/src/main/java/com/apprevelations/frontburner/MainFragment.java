@@ -34,8 +34,9 @@ public class MainFragment extends Fragment {
 
         Toolbar toolbar=(Toolbar)view.findViewById(R.id.toolbar);
         ActionBarActivity activity = (ActionBarActivity) getActivity();
+        toolbar.setNavigationIcon(R.drawable.ic_action_navigation_menu);
         activity.setSupportActionBar(toolbar);
-        activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+      //  activity.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
        // activity.getSupportActionBar().setTitle("");
 
         // END_INCLUDE (setup_viewpager)
@@ -50,7 +51,7 @@ public class MainFragment extends Fragment {
 
             @Override
             public int getIndicatorColor(int position) {
-                return getResources().getColor(R.color.material_blue_grey_800);    //define any color in xml resources and set it here, I have used white
+                return getResources().getColor(R.color.indi);    //define any color in xml resources and set it here, I have used white
             }
 
             @Override

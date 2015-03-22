@@ -2,12 +2,14 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#bdbdbd">
 
        <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -26,18 +28,17 @@
             android:layout_alignParentStart="true"
             android:background="#009688" />
 
-
         <android.support.v4.view.ViewPager
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@android:color/white" />
+            android:background="#ffffff" />
 
     </LinearLayout>
 
     <ImageButton
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
         android:background="@drawable/fab"
         android:layout_gravity="bottom|end"
         android:onClick="submitQues"
