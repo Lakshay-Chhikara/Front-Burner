@@ -37,11 +37,13 @@ public class XmlAdapter extends BaseAdapter {
             holder = new ViewHolder();
             holder.itemTitle = (TextView) convertView.findViewById(R.id.itemTitle);
             holder.itemHash = (TextView) convertView.findViewById(R.id.itemHash);
+            holder.itemHash = (TextView) convertView.findViewById(R.id.itemHash);
             convertView.setTag(holder);
         } else {
             holder = (ViewHolder) convertView.getTag();
         }
         holder.itemTitle.setText(items.get(position).getTitle());
+        holder.itemHash.setText(items.get(position).getHash());
         holder.itemHash.setText(items.get(position).getHash());
         return convertView;
     }

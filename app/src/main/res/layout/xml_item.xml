@@ -4,10 +4,10 @@
     android:id="@+id/cardview"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
     android:layout_marginLeft="22dp"
     android:layout_marginRight="22dp"
     android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp"
     card_view:cardBackgroundColor="#FFFFFF">
 
     <LinearLayout
