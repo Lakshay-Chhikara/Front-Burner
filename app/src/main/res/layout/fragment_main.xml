@@ -9,7 +9,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <android.support.v7.widget.Toolbar
+       <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -24,7 +24,7 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:background="#00009688" />
+            android:background="#009688" />
 
 
         <android.support.v4.view.ViewPager
@@ -36,8 +36,8 @@
     </LinearLayout>
 
     <ImageButton
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:background="@drawable/fab"
         android:layout_gravity="bottom|end"
         android:onClick="submitQues"
