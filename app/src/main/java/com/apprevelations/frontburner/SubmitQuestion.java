@@ -19,9 +19,6 @@ import com.ibm.mobile.services.data.IBMDataObject;
 import com.ibm.mobile.services.data.IBMQuery;
 import com.ibm.mobile.services.push.IBMPush;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,6 +64,16 @@ public class SubmitQuestion extends Fragment {
             ViewGroup parent = (ViewGroup) view.getParent();
             parent.removeView(view);
         }
+
+        view.findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newQuestionActivity = new Intent(getParentFragment().getActivity(),
+                        NewQuestionActivity.class);
+                newQuestionActivity.putExtra("uUserId", uUserId);
+                startActivity(newQuestionActivity);
+            }
+        });
 
         itemList = new ArrayList<Item>();
         lvArrayAdapter = new CustomQuesAdapter(getParentFragment().getActivity(), itemList);
@@ -131,61 +138,6 @@ public class SubmitQuestion extends Fragment {
         return view;
     }
 
-    public void storeQues() {
-
-        String quesBody = itemToAdd.getText().toString();
-        String category = categorySpinner.getSelectedItem().toString();
-
-        Item item = new Item();
-        if (!quesBody.equals("")) {
-            item.setName(quesBody);
-            item.setUserId(uUserId);
-            try {
-                item.setObject("category", category);
-                item.setObject("comments", new JSONArray("[]"));
-                item.setObject("upvotes", new JSONArray("[]"));
-                item.setObject("downvote", new JSONArray("[]"));
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            /**
-             * IBMObjectResult is used to handle the response from the server after
-             * either creating or saving an object.
-             *
-             * onResult is called if the object was successfully saved.
-             * onError is called if an error occurred saving the object.
-             */
-            item.save().continueWith(new Continuation<IBMDataObject, Void>() {
-
-                @Override
-                public Void then(Task<IBMDataObject> task) throws Exception {
-                    // Log error message, if the save task is cancelled.
-                    if (task.isCancelled()) {
-                        Log.e(CLASS_NAME, "Exception : Task " + task.toString() + " was cancelled.");
-                        showToast("Cancelled");
-                    }
-
-                    // Log error message, if the save task fails.
-                    else if (task.isFaulted()) {
-                        Log.e(CLASS_NAME, "Exception : " + task.getError().getMessage());
-                        showToast("Error");
-                    }
-
-                    // If the result succeeds, load the list.
-                    else {
-                        listItems();
-//                        updateOtherDevices();
-                    }
-                    return null;
-                }
-
-            }, Task.UI_THREAD_EXECUTOR);
-
-            // Set text field back to empty after item is added.
-            itemToAdd.setText("");
-        }
-    }
-
     /*
      * Will delete an item from the list.
      *
@@ -237,7 +189,7 @@ public class SubmitQuestion extends Fragment {
     }*/
 
     private void showToast(String message) {
-        Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getParentFragment().getActivity(), message, Toast.LENGTH_SHORT).show();
     }
 
     /**
