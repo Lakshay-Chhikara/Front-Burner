@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Front-Burner.iml" filepath="$PROJECT_DIR$/Front-Burner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FrontBurner.iml" filepath="$PROJECT_DIR$/FrontBurner.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

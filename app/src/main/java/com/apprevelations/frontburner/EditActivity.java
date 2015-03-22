@@ -16,8 +16,6 @@
 package com.apprevelations.frontburner;
 
 
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,12 +24,16 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
-import bolts.Continuation;
-import bolts.Task;
 
 import com.ibm.mobile.services.data.IBMDataObject;
+
+import java.util.List;
+
+import bolts.Continuation;
+import bolts.Task;
 
 public class EditActivity extends Activity {
 
@@ -40,6 +42,9 @@ public class EditActivity extends Activity {
 	BlueListApplication blApplication;
 	List<Item> itemList;
 	public static final String CLASS_NAME = "EditActivity";
+
+    EditText itemToAdd;
+    Spinner categorySpinner;
 	
 	@Override
 	/**

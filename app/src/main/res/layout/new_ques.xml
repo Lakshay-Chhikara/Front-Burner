@@ -15,6 +15,7 @@
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <EditText
+        android:id="@+id/newQues"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -39,6 +40,7 @@
         android:padding="10dp" />
 
     <Button
+        android:id="@+id/addNewQues"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"

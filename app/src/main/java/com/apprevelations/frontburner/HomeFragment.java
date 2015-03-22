@@ -1,11 +1,11 @@
 package com.apprevelations.frontburner;
 
-import android.support.v4.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,6 +40,8 @@ public class HomeFragment extends Fragment {
     private View view;
 
     String URL = "http://164.100.47.5/AndroidFeeds/QuestionList.aspx?member_id=2045";
+
+    public static final String CLASS_NAME = "HomeFragment";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
