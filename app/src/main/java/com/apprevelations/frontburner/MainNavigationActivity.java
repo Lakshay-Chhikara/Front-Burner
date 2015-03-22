@@ -1,5 +1,6 @@
 package com.apprevelations.frontburner;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -13,6 +14,7 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.LinearLayout;
 
 public class MainNavigationActivity extends ActionBarActivity implements
@@ -41,28 +43,29 @@ public class MainNavigationActivity extends ActionBarActivity implements
     private CharSequence mTitle;
     static LinearLayout mContainer;
     private boolean flag = true;
-    int Flag=0;
+    int Flag = 0;
     private Bundle mBundle = new Bundle();
     DrawerLayout mDrawerLayout;
     android.support.v7.widget.Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-       // getSupportActionBar().show();
+        // getSupportActionBar().show();
         setContentView(R.layout.activity_navigation);
 
-     //  toolbar =(android.support.v7.widget.Toolbar) findViewById(R.id.toolbarfeed);
-       // setSupportActionBar(toolbar);
+        //  toolbar =(android.support.v7.widget.Toolbar) findViewById(R.id.toolbarfeed);
+        // setSupportActionBar(toolbar);
         //getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-       // getSupportActionBar().setDisplayShowHomeEnabled(false);
+        // getSupportActionBar().setDisplayShowHomeEnabled(false);
         //getSupportActionBar().setDisplayUseLogoEnabled(false);
 
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mContainer = (LinearLayout) findViewById(R.id.container);
 
-       // restoreActionBar();
+        // restoreActionBar();
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
@@ -129,13 +132,16 @@ public class MainNavigationActivity extends ActionBarActivity implements
 
     }
 
-
+    public void submitQues(View v) {
+        Intent intent = new Intent(getApplication(), NewQuestionActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu items for use in the action bar
-      //  MenuInflater inflater = getMenuInflater();
-       // inflater.inflate(R.menu.actionbar_icons, menu);
+        //  MenuInflater inflater = getMenuInflater();
+        // inflater.inflate(R.menu.actionbar_icons, menu);
         /*MenuItem searchItem = menu.findItem(R.id.action_search);
         SearchView mSearchView = (SearchView) MenuItemCompat.getActionView(searchItem);
         setupSearchView(mSearchView);

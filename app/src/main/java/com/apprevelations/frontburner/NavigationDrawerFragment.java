@@ -3,7 +3,6 @@ package com.apprevelations.frontburner;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.ActionBarDrawerToggle;
@@ -310,8 +309,8 @@ public class NavigationDrawerFragment extends Fragment implements OnClickListene
     }
 
    /* public void setGooglePlusProfilePic(Bitmap googlePlusProfilePic) {
-        this.googlePlusProfilePic.setImageBitmap(googlePlusProfilePic);
-    }*/
+        this.googlePlusProfilePic.setImageBitmap(googlePlusProfilePiction);
+ */   }
 
 
-}
+
