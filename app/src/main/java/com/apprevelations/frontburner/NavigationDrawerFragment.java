@@ -86,9 +86,9 @@ public class NavigationDrawerFragment extends Fragment implements OnClickListene
 
         /*googlePlusProfileLayout =
                 (RelativeLayout) mDrawerScrollView.findViewById(R.id.google_plus_profile_layout);*/
-        googlePlusProfilePic =
-                (ImageView) mDrawerScrollView.findViewById(R.id.google_plus_profile_pic);
-        googlePlusUserName = (TextView) mDrawerScrollView.findViewById(R.id.google_plus_user_name);
+       // googlePlusProfilePic =
+        //        (ImageView) mDrawerScrollView.findViewById(R.id.google_plus_profile_pic);
+       // googlePlusUserName = (TextView) mDrawerScrollView.findViewById(R.id.google_plus_user_name);
        // mDrawerScrollView.findViewById(R.id.google_plus_profile_layout).setOnClickListener(this);
         mDrawerScrollView.findViewById(R.id.navigation_drawer_home).setOnClickListener(this);
        // mDrawerScrollView.findViewById(R.id.navigation_drawer_rate_us).setOnClickListener(this);
@@ -309,9 +309,9 @@ public class NavigationDrawerFragment extends Fragment implements OnClickListene
         void onNavigationDrawerItemSelected(int position);
     }
 
-    public void setGooglePlusProfilePic(Bitmap googlePlusProfilePic) {
+   /* public void setGooglePlusProfilePic(Bitmap googlePlusProfilePic) {
         this.googlePlusProfilePic.setImageBitmap(googlePlusProfilePic);
-    }
+    }*/
 
 
 }
